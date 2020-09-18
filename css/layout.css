@@ -49,11 +49,20 @@ p {
     margin-bottom: 52px;
 }
 
-li:before {
+ul {
+    list-style-type: disc;
+}
+
+ul li {
+    margin-left: 30px;
+}
+
+
+/* li:before {
     content: "•";
     width: 13px;
     margin-right: 14px;
-   }
+   } */
 
 .main-explanation {
     font-size: 12px;
