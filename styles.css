@@ -1,0 +1,71 @@
+html, body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 11px;
+    line-height: 23px;
+
+}
+.main-container {
+    width: 800px;
+    margin: 80px auto 80px;
+}
+h1 {
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 90px;
+    margin-bottom: 36px;
+}
+h2 {
+    font-size: 17px;
+    line-height: 19px;
+    font-weight: bold;
+    margin-top: 64px;
+    margin-bottom: 28px;
+}
+h3 {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: bold;
+    margin-top: 56px;
+    margin-bottom: 28px;
+}
+h4 {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+    margin-top: 52px;
+    margin-bottom: 28px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 1020px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+p {
+    margin-bottom: 52px;
+}
+
+li:before {
+    content: "•";
+    width: 13px;
+    margin-right: 14px;
+   }
+
+.main-explanation {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.section blockquote {
+    padding-left: 17px;
+    font-style: italic;
+    border-left: 3px solid black;
+    position: relative;
+    left: -20px;
+    margin-bottom: 52px;
+}
