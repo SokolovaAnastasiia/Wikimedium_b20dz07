@@ -13,81 +13,47 @@
             height: 900px;
             background: white;
             display: block;
-            margin: 10px auto;
-        }
-        .round {
-            width: 300px;
-            height: 50px;
-            background: black;
-            transform-origin: 25px 50%;
-            transition: all 0.1s ease-out;
-            display: flex;
-            align-items: center;
-        }
-
-        /* .round:hover {
-            transform: rotate(90deg);
-            transition: all 1s ease-out;
-        } */
-
-        .round-inside {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            background-color: yellow;
-            margin-left: 5px;
-        }
-
-        /* .round-inside:hover+.round{ */
-            /* transform: rotate(90deg);
-            transition: all 1s ease-out; */
-            /* background: gray;
-        } */
-
-        /* .round-inside:hover body{
-            background-color:red;
-        } */
-        .round:hover .round-inside{
-            background-color: red;
+            margin: 10px 200px;
         }
 
 
-        /* div, p, .letter{
-            display: block;
-            position: absolute;
-        }
         .red {
+            position: absolute;
             width: 300px;
             height: 300px;
             background: red;
             border-radius: 50%;
             left: 200px;
-            top: 50px;
-            transition: all 2s ease-out;
+            top: 100px;
+            transition: all 1s ease-out;
         }
         .red:hover {
-            transition: scale(2);
+            transform: scale(2);
             transition: all .1s ease-out;
         }
         .black {
-            width: 500px;
-            height: 50px;
+            position: absolute;
+            width: 300px;
+            height: 150px;
             background: black;
-            left: 100px;
-            top: 200px;
+            left: 600px;
+            top: 350px;
             transform: rotate(45deg);
+            transition: all 1s ease-out;
         }
         .black:hover {
-            left: 150px;
+            top: 400px;
+            left: 800px;
             transform: all .6s ease-out;
         }
         .orange {
+            position: absolute;
             width: 200px;
             height: 200px;
-            background: url(https://i.pinimg.com/564x/41/fc/05/41fc05b56ab3e01dd68b989496132aa3.jpg);
+            background: url(https://1.bp.blogspot.com/-0kvw8XTkaBs/VNR3pnd9fhI/AAAAAAAAEhg/BqNXu2_m8rA/s1600/seamless-mosaic-final-02.png);
             z-index: 1;
-            left: 100px;
-            top: 200px;
+            left: 300px;
+            top: 400px;
 
             transform: rotate(75deg);
             transition: all .2s ease-out;
@@ -97,23 +63,99 @@
             transition: all .6s ease-out;
         }
         .letter {
-            font-size: 300px;
-            left: 300px;
-            top: 20px;
+            font-size: 100px;
+            position: absolute;
+            left: 600px;
+            top: 100px;
             line-height: 300px;
-            color: violet;
-        } */
+            color: black;
+            transform: rotate(-25deg);
+            transition: all .2s ease-out;
+        }
+
+        .letter:hover {
+            opacity: 0.2;
+            transform: all .2s ease-out;
+        }
+
+        .first-line,.second-line {
+            position: absolute;
+            width: 50px;
+            height: 420px;
+            transition: all 1s ease-out;
+        }
+
+        .first-line {
+            left: 500px;
+            top: 300px;
+            background: url(https://klv-oboi.ru/img/gallery/99/thumbs/thumb_l_32962.jpg);
+            transform: rotate(35deg);
+        }
+        .second-line {
+            left: 600px;
+            top: 400px;
+            background: url(https://png.pngtree.com/thumb_back/fw800/background/20190910/pngtree-abstract-geometric-pattern-with-lines-background-vector-image_315008.jpg);
+            transform: rotate(90deg);
+        }
+        .first-line:hover {
+            transform: rotate(0deg);
+            transition: all .2s ease-out;
+        }
+
+        .second-line:hover {
+            width: 100px;
+            transition: all .2s ease-out;
+        }
+
+        .triangle-up {
+            position: absolute;
+            top: 250px;
+            left: 500px;
+        	width: 0;
+        	height: 0;
+        	border-left: 50px solid transparent;
+        	border-right: 50px solid transparent;
+        	border-bottom: 100px solid black;
+            z-index: 3;
+            transition: all 1s ease-out;
+        }
+
+        .triangle-up:hover {
+            transform: rotate(180deg);
+            transition: all .2s ease-out;
+        }
+
+        .triangle-up-2 {
+            position: absolute;
+            top: 0px;
+            left: 500px;
+        	width: 0;
+        	height: 0;
+        	border-left: 80px solid transparent;
+        	border-right: 80px solid transparent;
+        	border-bottom: 160px solid black;
+            z-index: 3;
+            transition: all 1s ease-out;
+        }
+
+        .triangle-up-2:hover {
+            transition: all 0.1s ease-out;
+            top: 30px;
+            left: 470px;
+        }
+
     </style>
 </head>
 <body>
     <artboard>
-        <div class="round">
-            <div class="round-inside"></div>
-        </div>
-        <!-- <div class="black"></div>
+        <div class="black"></div>
         <div class="red"></div>
         <div class="orange"></div>
-        <div class="letter">A</div> -->
+        <div class="letter">A</div>
+        <div class="first-line"></div>
+        <div class="second-line"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-up-2"></div>
     </artboard>
 
 
