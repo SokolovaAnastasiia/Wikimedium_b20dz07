@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .holder{
+        position:relative;
+        width:300px;
+        height:400px;
+        background:#ff6600;
+         margin:100px auto;
+    }
+    .block{
+        position:absolute;
+        left:0;
+        bottom:0;
+        right:0;
+        top:0;
+        background:rgba(255,255,255, 0.7);
+        padding:5px;
+        display:none;
+    }
+    .holder:hover .block{
+        display:block;
+    }
+    </style>
+</head>
+<body>
+    <div class="holder">
+<div class="block">
+<h2>Пример</h2>
+Пример блока, при наведении на который появляется другой блок.
+</div>
+</div>
+</body>
+</html>
