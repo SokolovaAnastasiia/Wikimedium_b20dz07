@@ -12,7 +12,15 @@
 .menubar img {
     height: 30px;
 }
-.menubar a {
+
+.menubar div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.menubar div a {
     color: #777;
     text-decoration: none;
+    margin-left: 30px;
 }
