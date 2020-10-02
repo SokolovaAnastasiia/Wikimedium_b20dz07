@@ -4,7 +4,7 @@ nav {
     display: block;
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 80px;
     padding: 30px;
     box-sizing: border-box;
     opacity: .1;
@@ -45,5 +45,11 @@ nav ul ul li {
 }
 
 nav ul, nav li {
+    width: 100%;
+}
+
+nav li: first-child {
+    font-size: 14px;
+    line-height: 16px;
     width: 100%;
 }
