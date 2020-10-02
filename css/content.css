@@ -23,7 +23,7 @@ article h4 { margin-top: 36px; font-size: 24px; line-height: 34px; color: rgba(0
 article h4 + p,
 article h4 + blockquote { margin-top: 4px;
 }
-article p, blockquote, li { margin-top: 29px; font-size: 20px; line-height: 34px;
+article p, article blockquote, article li { margin-top: 29px; font-size: 20px; line-height: 34px;
 }
 article blockquote { font-style: italic;
 }
@@ -41,21 +41,21 @@ article h3 + img { margin-top: 81px;
 }
 
 
-ul {
+article ul {
     list-style-type: disc;
 }
 
-ul li {
+article ul li {
     margin-left: 30px;
 }
 
-blockquote {
+article blockquote {
     display: block;
     position: relative;
     margin-bottom: 52px;
 }
 
-blockquote::before {
+article blockquote::before {
     content: "";
     position: absolute;
     width: 3px;
