@@ -10,6 +10,38 @@
 }
 
 @media all and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-/* article > * { width: calc(100% - 40px); } */
 article h1, article h2, article h3, article h4, article p, article ul, article blockquote { width: calc(100% - 40px); }
+}
+
+
+@media all and (max-width: 767px){
+    article h1, article h2, article h3, article h4, article p, article ul, article blockquote {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    article h1 { font-size: 33px; line-height: 30px;
+    }
+
+    article h1 + p { font-size: 18px; line-height: 28px;
+    }
+
+    article h2 { font-size: 28px; line-height: 32px;
+    }
+
+    article h3 { font-size: 24px; line-height: 30px;
+    }
+
+    article h4 { font-size: 22px; line-height: 30px;
+    }
+
+    article p, article blockquote, article li {font-size: 18px; line-height: 30px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    article h1, article h2, article h3, article h4, article p, article ul, article blockquote {
+        width: 320px;
+    }
 }
