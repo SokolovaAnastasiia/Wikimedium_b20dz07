@@ -8,13 +8,13 @@
 
     /******* SEVEN A (Arc) *******/
 .sevena .shape-container {
-  animation: move-right 6s infinite cubic-bezier(.37,.55,.49,.67);
+  animation: move-right 3s infinite cubic-bezier(.37,.55,.49,.67);
   position: absolute;
   left: calc(50% - 4em);
   top: calc(50% - 4em);
 }
 .sevena .shape {
-  animation: bounce 6s infinite linear;
+  animation: bounce 3s infinite linear;
   border-radius: 50%;
   position: relative;
   left: auto;
@@ -22,19 +22,19 @@
 }
 
 .sevena-2 .shape-container{
-    animation: move-right-2 5s infinite cubic-bezier(.37,.55,.49,.67);
+    animation: move-right-2 2.5s infinite cubic-bezier(.17,.67,.81,.9);
 }
 
 .sevena-2 .shape {
-    animation: bounce-2 5s infinite linear;
+    animation: bounce-2 2.5s infinite linear;
 }
 
 .sevena-3 .shape-container {
-    animation: move-right-3 4s infinite cubic-bezier(.37,.55,.49,.67);
+    animation: move-right-3 2.8s infinite cubic-bezier(.37,.55,.49,.67);
 }
 
 .sevena-3 .shape {
-    animation: bounce-3 4s infinite linear;
+    animation: bounce-3 2.8s infinite linear;
 }
 
 .sevena-4 .shape-container {
@@ -45,6 +45,40 @@
     animation: bounce-4 1s infinite linear;
     border-radius: 10%;
 }
+
+.sevena-5 .shape-container {
+    animation: move-5 3s infinite;
+}
+
+.sevena-5 .shape {
+    animation: bounce-5 3s infinite linear;
+    border-radius: 60%;
+}
+
+.sevena-6 .shape-container {
+    position: absolute;
+    left: calc(50% - 4em);
+    top: calc(50% - 4em);
+    animation: move-left-6 2s infinite cubic-bezier(.15,1.15,.94,.87);
+
+}
+.sevena-6 .shape {
+    border-radius: 10%;
+}
+
+.sevena-7 .shape {
+  border-radius: 50%;
+  animation: size-7 3s infinite;
+}
+
+.sevena-7 .shape-container {
+    position: absolute;
+    left: calc(50%);
+    top: calc(50%);
+    animation: move-7 3s infinite;
+}
+
+
 /* 1 */
 @keyframes move-right {
   0% {
@@ -129,9 +163,9 @@
 @keyframes bounce-2 {
   0% {
     transform: translateY(-8em);
-    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+    animation-timing-function: cubic-bezier(.73,.14,1,.69);
   }
-  10% {
+  7% {
     transform: translateY(8em);
     animation-timing-function: cubic-bezier(.19,1,.7,1);
   }
@@ -178,7 +212,7 @@
     animation-timing-function: cubic-bezier(.51,.01,.79,.02);
   }
   45% {
-    transform: translateY(8em) scaleX(0.95) scaleY(1.05);;
+    transform: translateY(8em) scaleX(0.95) scaleY(1.05);
     animation-timing-function: cubic-bezier(.19,1,.7,1);
   }
   50% {
@@ -186,7 +220,7 @@
     animation-timing-function: cubic-bezier(.51,.01,.79,.02);
   }
   56% {
-    transform: translateY(8em);
+    transform: translateY(8em)  scaleX(0.97) scaleY(1.02);
     animation-timing-function: cubic-bezier(.19,1,.7,1);
   }
   60% {
@@ -257,10 +291,102 @@
   }
 }
 
+/* 5 */
+@keyframes move-5 {
+  0% {
+    transform: translateX(-20em);
+    animation-timing-function: cubic-bezier(.66,.01,.51,1);
+  }
+  50% {
+    transform: translateX(20em);
+    animation-timing-function: cubic-bezier(.66,.01,.51,1);
+  }
+  100% {
+    transform: translateX(-20em);
+    animation-timing-function: cubic-bezier(.66,.01,.51,1);
+  }
+}
+
+@keyframes bounce-5 {
+  0% {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  25% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  50%{
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  75% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  100% {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+}
+
+
+
+/* 6 */
+@keyframes move-left-6 {
+  0% {
+    transform: translateX(-20em);
+  }
+  100% {
+    transform: translateX(20em);
+  }
+}
+
+/* 7 */
+
+@keyframes move-7 {
+  0% {
+    transform: translateX(-20em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  50% {
+    transform: translateX(20em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  100% {
+    transform: translateX(-20em);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+}
+
+@keyframes size-7 {
+  0% {
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0,0,.58,1);
+  }
+  25% {
+    transform: scale(0.4);
+    animation-timing-function: cubic-bezier(.42,0,1,1);
+  }
+  50% {
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0,0,.58,1);
+  }
+  75% {
+    transform: scale(2.1);
+    animation-timing-function: cubic-bezier(.42,0,1,1);
+  }
+  100% {
+    transition: scale(1);
+    animation-timing-function: cubic-bezier(0,0,.58,1);
+  }
+}
+
+
 /* General styling */
 body {
   margin: 0;
-  background: #e9b59f;
+  background: #56CCF2;
   font-family: HelveticaNeue, Arial, Sans-serif;
   color: #fff;
 }
@@ -275,7 +401,7 @@ h1 {
 }
 
 h2 {
-  font-size: 0.75em;
+  font-size: 4.75em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -303,26 +429,51 @@ a {
   top: calc(50% - 2em);
   left: calc(50% - 2em);
 }
-
     </style>
 </head>
+
+
+
+
 <body>
     <article class="principle sevena">
+        <h2>1. Пластиковый мяч</h2>
         <div class="shape-container">
           <div class="shape a"></div>
         </div>
     </article>
     <article class="principle sevena sevena-2">
+        <h2>2. Мяч для боулинга</h2>
         <div class="shape-container">
           <div class="shape a"></div>
         </div>
     </article>
     <article class="principle sevena sevena-3">
+        <h2>3. Резиновый мяч</h2>
         <div class="shape-container">
           <div class="shape a"></div>
         </div>
     </article>
     <article class="principle sevena sevena-4">
+        <h2>4. Прыгучий квадрат</h2>
+        <div class="shape-container">
+          <div class="shape a"></div>
+        </div>
+    </article>
+    <article class="principle sevena-6">
+        <h2>5. Тормозящий квадрат</h2>
+        <div class="shape-container">
+          <div class="shape a"></div>
+        </div>
+    </article>
+    <article class="principle sevena sevena-5">
+        <h2>6. Маятник</h2>
+        <div class="shape-container">
+          <div class="shape a"></div>
+        </div>
+    </article>
+    <article class="principle sevena-7">
+        <h2>7. Планета вращается</h2>
         <div class="shape-container">
           <div class="shape a"></div>
         </div>
