@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Emoji</title>
+    <style>
+    body {
+      background: #56CCF2;
+    }
+    .emojies {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .emoji {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        background: url('images/emoji-160.png');
+    }
+
+    .normal-mood {
+        animation: normal-mood 1.5s steps(1) infinite;
+    }
+    .laugh-mood {
+        animation: laugh-mood 1.5s steps(1) infinite;
+    }
+    .crazy-mood {
+        animation: crazy-mood 1.5s steps(1) infinite;
+    }
+    .love-mood {
+        animation: love-mood 1.5s steps(1) infinite;
+    }
+    .thinking-mood {
+        animation: thinking-mood 1.5s steps(1) infinite;
+    }
+
+    @keyframes normal-mood {
+        0%  {background-position: 0px top;}
+        33% {background-position: -160px top;}
+        66% {background-position: -320px top;}
+    }
+    @keyframes laugh-mood {
+        0%  {background-position: 0px -160px;}
+        33% {background-position: -160px -160px;}
+        66% {background-position: -320px -160px;}
+    }
+    @keyframes crazy-mood {
+        0%  {background-position: 0px -320px;}
+        33% {background-position: -160px -320px;}
+        66% {background-position: -320px -320px;}
+    }
+    @keyframes love-mood {
+        0%  {background-position: 0px -480px;}
+        33% {background-position: -160px -480px;}
+        66% {background-position: -320px -480px;}
+    }
+    @keyframes thinking-mood {
+        0%  {background-position: 0px -640px;}
+        33% {background-position: -160px -640px;}
+        66% {background-position: -320px -640px;}
+    }
+
+    .emoji:hover{
+      animation-play-state: paused;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="emojies">
+      <div class="emoji normal-mood"></div>
+      <div class="emoji laugh-mood"></div>
+      <div class="emoji crazy-mood"></div>
+      <div class="emoji love-mood"></div>
+      <div class="emoji thinking-mood"></div>
+    </div>
+  </body>
+</html>
