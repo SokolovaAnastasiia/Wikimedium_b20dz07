@@ -1,0 +1,172 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ccc;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 300px;
+            height: 50px;
+            background: black;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: all 2s;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 70px;
+        }
+
+        .btn:hover {
+            background: red;
+            transition: all .2s;
+        }
+
+        .btn:hover ~ .container > .row {
+            animation-play-state: paused;
+        }
+
+        .container {
+            width: 300px;
+            height: 50px;
+            background: white;
+            position: relative;
+            padding: 15px 0;
+            overflow: hidden;
+            margin-bottom: 80px;;
+        }
+
+        .row {
+            display: block;
+            position: absolute;
+            /* left: -800px; */
+            height: 20px;
+            width: 1100px;
+            background: red;
+            animation: row-move 6s linear infinite;
+            /* animation-delay: -28s; */
+        }
+
+        .clock {
+            width: 300px;
+            height: 100px;
+            position: relative;
+            text-align: center;
+        }
+
+        .cl-e {
+            display: inline-block;
+            background: #111;
+            color: white;
+            width: 60px;
+            height: 100px;
+            border-radius: 4px;
+            vertical-align: top;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cl-d {
+            display: inline-block;
+            color: #111;
+            width: 16px;
+            height: 100px;
+            vertical-align: top;
+            line-height: 100px;
+            font-size: 60px;
+            animation: blink .5s linear alternate infinite;
+        }
+
+        .num {
+            width: 60px;
+            line-height: 100px;
+            font-size: 60px;
+            position: absolute;
+        }
+
+        .sec-e {
+            animation: sec 1s linear infinite;
+        }
+
+        .sec-d {
+            animation: dec 6s steps(6) infinite;
+        }
+
+        .min-e {
+            animation: sec 60s steps(10) infinite;
+        }
+
+        .min-d {
+            animation: dec 360s steps(6) infinite;
+        }
+
+        @keyframes blink {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+
+        @keyframes row-move {
+            0% {right: -800px;}
+            100% {right: calc(100% - 302px);}
+        }
+
+        @keyframes sec {
+            0% {top:0;}
+            100% {top: -1000%;}
+        }
+
+        @keyframes dec {
+            0% {top:0;}
+            100% {top: -600%;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="btn">
+        ||
+    </div>
+    <div class="container">
+        <div class="row">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequuntur ullam tempora consectetur ducimus deleniti  consequuntur ullam tempora consectetur ducimus deleniti.
+        </div>
+    </div>
+
+    <div class="clock">
+        <div class="cl-e">
+            <div class="num min-d">
+                0 1 2 3 4 5
+            </div>
+        </div>
+        <div class="cl-e">
+            <div class="num min-e">
+                0 1 2 3 4 5 6 7 8 9 0
+            </div>
+        </div>
+        <div class="cl-d">:</div>
+        <div class="cl-e">
+            <div class="num sec-d">
+                0 1 2 3 4 5
+            </div>
+        </div>
+        <div class="cl-e">
+            <div class="num sec-e">
+                0 1 2 3 4 5 6 7 8 9 0
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
