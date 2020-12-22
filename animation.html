@@ -12,6 +12,7 @@
   position: absolute;
   left: calc(50% - 4em);
   top: calc(50% - 4em);
+  animation-play-state: paused;
 }
 .sevena .shape {
   animation: bounce 3s infinite linear;
@@ -19,7 +20,13 @@
   position: relative;
   left: auto;
   top: auto;
+  animation-play-state: paused;
 }
+
+.sevena .shape:hover {
+    animation-play-state: running;
+}
+
 
 .sevena-2 .shape-container{
     animation: move-right-2 2.5s infinite cubic-bezier(.17,.67,.81,.9);
